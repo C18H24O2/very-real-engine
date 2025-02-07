@@ -1,0 +1,11 @@
+.xmake/
+.vs/
+.cache/
+build/
+*.swp
+*.ini
+*.exe
+*.lib
+*.exp
+.gdb_history
+compile_commands.json
