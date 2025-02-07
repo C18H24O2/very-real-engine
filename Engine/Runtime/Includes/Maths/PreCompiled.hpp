@@ -4,5 +4,10 @@
 #include <Core/CompilationProfile.hpp>
 
 #include <cmath>
+#include <string>
+#include <ostream>
+#include <sstream>
+
+#include <Core/Logs.hpp>
 
 #endif

@@ -147,7 +147,7 @@ namespace Mlk
 			}
 		};
 
-		#ifdef MLX_PLAT_LINUX
+		#ifdef MLK_PLAT_LINUX
 			template<typename T>
 			void SinCos(T x, T* sin, T* cos)
 			{
