@@ -1,10 +1,7 @@
-#include <Core/OS/OSInstance.h>
-#include <Graphics/Enums.h>
-#include <Core/Application.h>
-#include <Graphics/GraphicsModule.h>
-#include <Core/CLI.h>
-#include <Core/Logs.h>
-#include <Utils/ConstMap.h>
+#include <Graphics/GraphicsModule.hpp>
+#include <Core/OS/OSInstance.hpp>
+#include <Core/Application.hpp>
+#include <Core/Logs.hpp>
 
 namespace Mlk
 {

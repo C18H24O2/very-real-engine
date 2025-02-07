@@ -6,6 +6,7 @@
 #include <Core/Module.hpp>
 #include <Utils/TypeList.hpp>
 #include <Renderer/Enums.hpp>
+#include <Renderer/RHI/RHIRenderer.hpp>
 
 namespace Mlk
 {
@@ -31,6 +32,7 @@ namespace Mlk
 		private:
 			static RendererModule* s_instance;
 			RendererDrivers m_chosen_driver = RendererDrivers::None;
+			RHIRenderer* m_renderer = nullptr;
 			LibModule m_driver_lib = NullModule;
 	};
 }

@@ -1,11 +1,9 @@
-#ifndef MLK_GRAPHICS_MODULE_HPP
-#define MLK_GRAPHICS_MODULE_HPP
+#ifndef MLK_GRAPHICS_MODULE_HPP__
+#define MLK_GRAPHICS_MODULE_HPP__
 
-#include <Core/OS/LibLoader.hpp>
 #include <Graphics/PreCompiled.hpp>
 #include <Core/Module.hpp>
 #include <Utils/TypeList.hpp>
-#include <Graphics/Enums.hpp>
 
 namespace Mlk
 {
