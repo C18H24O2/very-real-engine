@@ -3,7 +3,7 @@
 #include <Core/Application.hpp>
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	GraphicsModule* GraphicsModule::s_instance = nullptr;
 

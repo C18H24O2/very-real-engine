@@ -1,12 +1,12 @@
-#ifndef MLK_RHI_DEFS_HPP__
-#define MLK_RHI_DEFS_HPP__
+#ifndef SQUID_RHI_DEFS_HPP__
+#define SQUID_RHI_DEFS_HPP__
 
 #include <Maths/Vec4.hpp>
 #include <Utils/NonOwningPtr.hpp>
 #include <Renderer/PreCompiled.hpp>
 #include <Renderer/RHI/Enums.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	using DeviceSize = std::uint64_t;
 

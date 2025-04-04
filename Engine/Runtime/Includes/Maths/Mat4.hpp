@@ -1,11 +1,11 @@
-#ifndef MLK_MATHS_MAT4__
-#define MLK_MATHS_MAT4__
+#ifndef SQUID_MATHS_MAT4__
+#define SQUID_MATHS_MAT4__
 
 #include <Maths/PreCompiled.hpp>
 
 #include <Maths/Angles.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T> struct Vec2;
 	template<typename T> struct Vec3;

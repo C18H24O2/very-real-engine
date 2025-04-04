@@ -1,7 +1,7 @@
 #pragma once
 #include <Core/Memory/MemoryManager.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T, typename ... Args>
 	inline T* MemAlloc(Args&& ... args)

@@ -1,11 +1,11 @@
-#ifndef MLK_CORE_MODULE_HPP__
-#define MLK_CORE_MODULE_HPP__
+#ifndef SQUID_CORE_MODULE_HPP__
+#define SQUID_CORE_MODULE_HPP__
 
 #include <Utils/NonMovable.hpp>
 #include <Utils/NonCopyable.hpp>
 #include <Core/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	class Module : public NonCopyable, NonMovable
 	{

@@ -1,12 +1,12 @@
-#ifndef MLK_MATHS_QUATERNIONS_HPP__
-#define MLK_MATHS_QUATERNIONS_HPP__
+#ifndef SQUID_MATHS_QUATERNIONS_HPP__
+#define SQUID_MATHS_QUATERNIONS_HPP__
 
 #include <Maths/PreCompiled.hpp>
 
 #include <Maths/Angles.hpp>
 #include <Maths/Vec3.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	struct Quat

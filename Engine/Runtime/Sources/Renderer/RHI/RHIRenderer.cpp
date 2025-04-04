@@ -1,5 +1,5 @@
 #include <Renderer/RHI/RHIRenderer.hpp>
 
-namespace Mlk
+namespace Squid
 {
 }

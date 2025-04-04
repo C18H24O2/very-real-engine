@@ -1,5 +1,5 @@
-#ifndef MLK_RENDERER_MODULE_HPP__
-#define MLK_RENDERER_MODULE_HPP__
+#ifndef SQUID_RENDERER_MODULE_HPP__
+#define SQUID_RENDERER_MODULE_HPP__
 
 #include <Core/OS/LibLoader.hpp>
 #include <Renderer/PreCompiled.hpp>
@@ -8,9 +8,9 @@
 #include <Renderer/Enums.hpp>
 #include <Renderer/RHI/RHIRenderer.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_RENDERER_API RendererModule : public Module
+	class SQUID_RENDERER_API RendererModule : public Module
 	{
 		public:
 			using Dependencies = TypeList<>;

@@ -1,6 +1,6 @@
 #include <Core/Ticks.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	void Ticks::Init()
 	{

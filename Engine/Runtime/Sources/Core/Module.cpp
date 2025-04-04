@@ -1,7 +1,7 @@
 #include <Core/Module.hpp>
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	Module::Module(std::string name) : m_module_name(std::move(name))
 	{

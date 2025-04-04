@@ -1,13 +1,13 @@
-#ifndef MLK_CORE_COMPONENT_STACK_HPP__
-#define MLK_CORE_COMPONENT_STACK_HPP__
+#ifndef SQUID_CORE_COMPONENT_STACK_HPP__
+#define SQUID_CORE_COMPONENT_STACK_HPP__
 
 #include <Core/PreCompiled.hpp>
 #include <Core/ComponentBase.hpp>
 #include <Core/Memory/MemoryManager.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_CORE_API ComponentStack
+	class SQUID_CORE_API ComponentStack
 	{
 		public:
 			using iterator = std::vector<ComponentBase*>::iterator;

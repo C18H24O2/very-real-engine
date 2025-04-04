@@ -1,7 +1,7 @@
 #pragma once
 #include <Maths/Vec4.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	constexpr Vec4<T>::Vec4(T X, T Y, T Z, T W) : x(X), y(Y), z(Z), w(W) {}
@@ -119,14 +119,14 @@ namespace Mlk
 	template<typename T>
 	constexpr T& Vec4<T>::operator[](std::size_t i)
 	{
-		Mlk::Assert(i < 4, "index out of range");
+		Squid::Assert(i < 4, "index out of range");
 		return *(&x + i);
 	}
 
 	template<typename T>
 	constexpr const T& Vec4<T>::operator[](std::size_t i) const
 	{
-		Mlk::Assert(i < 4, "index out of range");
+		Squid::Assert(i < 4, "index out of range");
 		return *(&x + i);
 	}
 

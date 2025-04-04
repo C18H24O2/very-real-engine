@@ -2,7 +2,7 @@
 #include <Core/Memory/JamAllocator.hpp>
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T, typename ... Args>
 	T* JamAllocator::Alloc(Args&&... args)
@@ -23,7 +23,7 @@ namespace Mlk
 	template<typename T>
 	T* JamAllocator::AllocSize(size_t size)
 	{
-		static_assert(!std::is_class_v<T>, "Mlk::JamAllocator::AllocSize cannot allocate classes/structs");
+		static_assert(!std::is_class_v<T>, "Squid::JamAllocator::AllocSize cannot allocate classes/structs");
 
 		T* ptr = reinterpret_cast<T*>(InternalAlloc(size));
 		void* tmp = ptr;

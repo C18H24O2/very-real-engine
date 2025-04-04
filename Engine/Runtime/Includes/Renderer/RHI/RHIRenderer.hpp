@@ -1,12 +1,12 @@
-#ifndef MLK_RHI_RENDERER_HPP__
-#define MLK_RHI_RENDERER_HPP__
+#ifndef SQUID_RHI_RENDERER_HPP__
+#define SQUID_RHI_RENDERER_HPP__
 
 #include <Renderer/PreCompiled.hpp>
 #include <Renderer/RHI/Defs.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_RENDERER_API RHIRenderer
+	class SQUID_RENDERER_API RHIRenderer
 	{
 		public:
 			RHIRenderer() = default;

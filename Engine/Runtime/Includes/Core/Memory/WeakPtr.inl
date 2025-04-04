@@ -1,7 +1,7 @@
 #pragma once
 #include <Core/Memory/WeakPtr.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template <typename T>
 	WeakPtr<T>::WeakPtr(const WeakPtr<T>& rhs) noexcept : m_ref(rhs.m_ref), m_ptr(rhs.m_ptr)

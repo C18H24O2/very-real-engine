@@ -1,12 +1,12 @@
-#ifndef MLK_UNIX_LIB_LOADER_HPP__
-#define MLK_UNIX_LIB_LOADER_HPP__
+#ifndef SQUID_UNIX_LIB_LOADER_HPP__
+#define SQUID_UNIX_LIB_LOADER_HPP__
 
 #include <Platform/Unix/PreCompiled.hpp>
 #include <Core/OS/LibLoader.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_UNIX_API UnixLibLoader : public LibLoader
+	class SQUID_UNIX_API UnixLibLoader : public LibLoader
 	{
 		public:
 			UnixLibLoader() = default;

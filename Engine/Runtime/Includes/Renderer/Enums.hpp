@@ -1,9 +1,9 @@
-#ifndef MLK_RENDERER_ENUMS_HPP__
-#define MLK_RENDERER_ENUMS_HPP__
+#ifndef SQUID_RENDERER_ENUMS_HPP__
+#define SQUID_RENDERER_ENUMS_HPP__
 
 #include <Renderer/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	enum class RendererDrivers
 	{

@@ -3,7 +3,7 @@
 
 #include <Core/Memory/MemoryManager.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template <typename T>
 	SharedPtr<T>::SharedPtr(T* ptr) noexcept : m_ptr(ptr), m_ref(MemAlloc<RefCounter>())

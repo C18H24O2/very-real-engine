@@ -1,5 +1,5 @@
-#ifndef MLK_CORE_APPLICATION_HPP__
-#define MLK_CORE_APPLICATION_HPP__
+#ifndef SQUID_CORE_APPLICATION_HPP__
+#define SQUID_CORE_APPLICATION_HPP__
 
 #include <Core/PreCompiled.hpp>
 #include <Utils/TypeList.hpp>
@@ -7,9 +7,9 @@
 #include <Core/EngineConfig.hpp>
 #include <Core/Module.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_CORE_API Application : public ComponentStack
+	class SQUID_CORE_API Application : public ComponentStack
 	{
 		public:
 			Application(const EngineConfig& config);
@@ -25,7 +25,7 @@ namespace Mlk
 
 			inline const EngineConfig& GetEngineConfig() const noexcept { return m_engine_config; }
 
-			MLK_FORCEINLINE constexpr void Quit() noexcept;
+			SQUID_FORCEINLINE constexpr void Quit() noexcept;
 
 			~Application();
 

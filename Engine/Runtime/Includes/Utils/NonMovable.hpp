@@ -1,7 +1,7 @@
-#ifndef MLK_UTILS_NON_MOVABLE_HPP__
-#define MLK_UTILS_NON_MOVABLE_HPP__
+#ifndef SQUID_UTILS_NON_MOVABLE_HPP__
+#define SQUID_UTILS_NON_MOVABLE_HPP__
 
-namespace Mlk
+namespace Squid
 {
 	class NonMovable
 	{

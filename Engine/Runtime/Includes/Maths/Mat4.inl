@@ -8,7 +8,7 @@
 #include <Maths/Vec4.hpp>
 #include <Maths/MathsUtils.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	constexpr Mat4<T>::Mat4(T r11, T r12, T r13, T r14,

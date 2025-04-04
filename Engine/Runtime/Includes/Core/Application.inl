@@ -1,7 +1,7 @@
 #pragma once
 #include <Core/Application.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	constexpr void Application::Quit() noexcept
 	{

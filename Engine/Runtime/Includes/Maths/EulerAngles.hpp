@@ -1,11 +1,11 @@
-#ifndef MLK_MATHS_EULER_ANGLES_HPP__
-#define MLK_MATHS_EULER_ANGLES_HPP__
+#ifndef SQUID_MATHS_EULER_ANGLES_HPP__
+#define SQUID_MATHS_EULER_ANGLES_HPP__
 
 #include <Maths/PreCompiled.hpp>
 
 #include <Maths/Angles.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	struct EulerAngles

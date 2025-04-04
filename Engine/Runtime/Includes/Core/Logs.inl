@@ -3,7 +3,7 @@
 
 #include <Core/Format.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename... Args>
 	void DebugLog(unsigned int line, std::string_view file, std::string_view function, std::string message, const Args&... args)
@@ -103,7 +103,7 @@ namespace Mlk
 		}
 	}
 
-	#if defined(MLK_CORE_DEBUG) || defined(MLK_FORCE_ENABLE_ASSERTS)
+	#if defined(SQUID_CORE_DEBUG) || defined(SQUID_FORCE_ENABLE_ASSERTS)
 		template<typename... Args>
 		void Assert(bool cond, unsigned int line, std::string_view file, std::string_view function, std::string message, const Args&... args)
 		{

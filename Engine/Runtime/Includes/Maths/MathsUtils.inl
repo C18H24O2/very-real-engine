@@ -3,7 +3,7 @@
 
 #include <Maths/Constants.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	[[nodiscard]] constexpr T Mod(T x, T y) noexcept

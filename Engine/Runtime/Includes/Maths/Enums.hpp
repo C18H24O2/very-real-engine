@@ -1,9 +1,9 @@
-#ifndef MLK_MATHS_MATHS_ENUMS_HPP__
-#define MLK_MATHS_MATHS_ENUMS_HPP__
+#ifndef SQUID_MATHS_MATHS_ENUMS_HPP__
+#define SQUID_MATHS_MATHS_ENUMS_HPP__
 
 #include <Maths/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	enum class AngleUnit
 	{

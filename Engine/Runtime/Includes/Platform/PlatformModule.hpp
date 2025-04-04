@@ -1,13 +1,13 @@
-#ifndef MLK_PLATFORM_MODULE_HPP__
-#define MLK_PLATFORM_MODULE_HPP__
+#ifndef SQUID_PLATFORM_MODULE_HPP__
+#define SQUID_PLATFORM_MODULE_HPP__
 
 #include <Platform/PreCompiled.hpp>
 #include <Core/Module.hpp>
 #include <Utils/TypeList.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_PLATFORM_API PlatformModule : public Module
+	class SQUID_PLATFORM_API PlatformModule : public Module
 	{
 		public:
 			using Dependencies = TypeList<class CoreModule>;

@@ -1,32 +1,32 @@
-#ifndef MLK_UNIX_HPP__
-#define MLK_UNIX_HPP__
+#ifndef SQUID_UNIX_HPP__
+#define SQUID_UNIX_HPP__
 
 #include <Core/CompilationProfile.hpp>
 
-#ifndef MLK_UNIX_STATIC
-	#ifdef MLK_PLAT_WINDOWS
-		#ifdef MLK_COMPILER_MSVC
-			#ifdef MLK_UNIX_BUILD
-				#define MLK_UNIX_API __declspec(dllexport)
+#ifndef SQUID_UNIX_STATIC
+	#ifdef SQUID_PLAT_WINDOWS
+		#ifdef SQUID_COMPILER_MSVC
+			#ifdef SQUID_UNIX_BUILD
+				#define SQUID_UNIX_API __declspec(dllexport)
 			#else
-				#define MLK_UNIX_API __declspec(dllimport)
+				#define SQUID_UNIX_API __declspec(dllimport)
 			#endif
-		#elif defined(MLK_COMPILER_GCC)
-			#ifdef MLK_UNIX_BUILD
-				#define MLK_UNIX_API __attribute__((dllexport))
+		#elif defined(SQUID_COMPILER_GCC)
+			#ifdef SQUID_UNIX_BUILD
+				#define SQUID_UNIX_API __attribute__((dllexport))
 			#else
-				#define MLK_UNIX_API __attribute__((dllimport))
+				#define SQUID_UNIX_API __attribute__((dllimport))
 			#endif
 		#else
-			#define MLK_UNIX_API
+			#define SQUID_UNIX_API
 		#endif
-	#elif defined(MLK_COMPILER_GCC)
-		#define MLK_UNIX_API __attribute__((visibility("default")))
+	#elif defined(SQUID_COMPILER_GCC)
+		#define SQUID_UNIX_API __attribute__((visibility("default")))
 	#else
-		#define MLK_UNIX_API
+		#define SQUID_UNIX_API
 	#endif
 #else
-	#define MLK_UNIX_API
+	#define SQUID_UNIX_API
 #endif
 
 #endif

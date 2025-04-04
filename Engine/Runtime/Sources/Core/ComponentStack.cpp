@@ -3,7 +3,7 @@
 #include <Core/Memory/JamAllocator.hpp>
 #include <Core/Memory/FixedAllocator.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	ComponentBase& ComponentStack::AddComponent(ComponentBase* component)
 	{

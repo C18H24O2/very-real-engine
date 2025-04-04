@@ -2,7 +2,7 @@
 
 #include <Core/Format.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	// TODO : make single functions that manages stringstreams and ostreams
 	namespace Internal

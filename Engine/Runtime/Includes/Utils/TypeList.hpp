@@ -1,9 +1,9 @@
-#ifndef MLK_TYPE_LIST_HPP__
-#define MLK_TYPE_LIST_HPP__
+#ifndef SQUID_TYPE_LIST_HPP__
+#define SQUID_TYPE_LIST_HPP__
 
 #include <Utils/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	namespace Internal
 	{

@@ -1,5 +1,5 @@
-#ifndef MLK_PLATFORM_BUNDLE_HPP__
-#define MLK_PLATFORM_BUNDLE_HPP__
+#ifndef SQUID_PLATFORM_BUNDLE_HPP__
+#define SQUID_PLATFORM_BUNDLE_HPP__
 
 #include <Platform/PlatformModule.hpp>
 #include <Platform/Enums.hpp>

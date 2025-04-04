@@ -1,7 +1,7 @@
 #include <Platform/WindowComponent.hpp>
 #include <Core/Memory/MemoryManager.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	WindowComponent::WindowComponent(std::size_t width, std::size_t height, WindowStyle style) : ComponentBase("__WindowComponent")
 	{

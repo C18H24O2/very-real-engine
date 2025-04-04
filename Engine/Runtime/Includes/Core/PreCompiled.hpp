@@ -1,5 +1,5 @@
-#ifndef MLK_CORE_PRE_COMPILED_HEADER_HPP__
-#define MLK_CORE_PRE_COMPILED_HEADER_HPP__
+#ifndef SQUID_CORE_PRE_COMPILED_HEADER_HPP__
+#define SQUID_CORE_PRE_COMPILED_HEADER_HPP__
 
 #include <Core/CompilationProfile.hpp>
 #include <Core/Core.hpp>

@@ -1,14 +1,14 @@
-#ifndef MLK_CORE_COREMODULE_HPP__
-#define MLK_CORE_COREMODULE_HPP__
+#ifndef SQUID_CORE_COREMODULE_HPP__
+#define SQUID_CORE_COREMODULE_HPP__
 
 #include <Core/PreCompiled.hpp>
 #include <Core/Module.hpp>
 #include <Core/Ticks.hpp>
 #include <Utils/TypeList.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_CORE_API CoreModule : public Module
+	class SQUID_CORE_API CoreModule : public Module
 	{
 		public:
 			using Dependencies = TypeList<>;

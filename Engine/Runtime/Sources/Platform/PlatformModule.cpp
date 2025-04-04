@@ -3,7 +3,7 @@
 #include <Core/Logs.hpp>
 #include <Core/Memory/MemoryManager.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	PlatformModule* PlatformModule::s_instance = nullptr;
 

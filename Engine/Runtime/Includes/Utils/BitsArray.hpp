@@ -1,12 +1,12 @@
-#ifndef MLK_UTILS_BITS_ARRAY_HPP__
-#define MLK_UTILS_BITS_ARRAY_HPP__
+#ifndef SQUID_UTILS_BITS_ARRAY_HPP__
+#define SQUID_UTILS_BITS_ARRAY_HPP__
 
 #include <Utils/PreCompiled.hpp>
 #include <Utils/NonCopyable.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	#ifdef MLK_64BITS
+	#ifdef SQUID_64BITS
 		using uintsys_t = uint64_t;
 	#else
 		using uintsys_t = uint32_t;

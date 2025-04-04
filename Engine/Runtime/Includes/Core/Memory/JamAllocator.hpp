@@ -2,9 +2,9 @@
 
 #include <Core/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_CORE_API JamAllocator
+	class SQUID_CORE_API JamAllocator
 	{
 		public:
 			JamAllocator() = default;

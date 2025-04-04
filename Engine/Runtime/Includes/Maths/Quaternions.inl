@@ -1,7 +1,7 @@
 #pragma once
 #include <Maths/Quaternions.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	constexpr Quat<T>::Quat(T W, T X, T Y, T Z) : w(W), x(X), y(Y), z(Z)
@@ -46,7 +46,7 @@ namespace Mlk
 	RadianAngle<T> Quat<T>::AngleBetween(const Quat& quat) const
 	{
 		T alpha = Vec3<T>::DotProduct(Vec3<T>(x, y, z), Vec3<T>(quat.x, quat.y, quat.z));
-		return std::acos(Mlk::Clamp(alpha, T(-1.0), T(1.0)));
+		return std::acos(Squid::Clamp(alpha, T(-1.0), T(1.0)));
 	}
 
 	template<typename T>
@@ -366,10 +366,10 @@ namespace Mlk
 	constexpr Quat<T> Quat<T>::Lerp(const Quat& from, const Quat& to, T interpolation)
 	{
 		Quat interpolated;
-		interpolated.w = Mlk::Lerp(from.w, to.w, interpolation);
-		interpolated.x = Mlk::Lerp(from.x, to.x, interpolation);
-		interpolated.y = Mlk::Lerp(from.y, to.y, interpolation);
-		interpolated.z = Mlk::Lerp(from.z, to.z, interpolation);
+		interpolated.w = Squid::Lerp(from.w, to.w, interpolation);
+		interpolated.x = Squid::Lerp(from.x, to.x, interpolation);
+		interpolated.y = Squid::Lerp(from.y, to.y, interpolation);
+		interpolated.z = Squid::Lerp(from.z, to.z, interpolation);
 
 		return interpolated;
 	}

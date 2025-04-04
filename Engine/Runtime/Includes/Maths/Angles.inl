@@ -4,7 +4,7 @@
 #include <Maths/Constants.hpp>
 #include <Maths/MathsUtils.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	namespace Internal
 	{
@@ -147,7 +147,7 @@ namespace Mlk
 			}
 		};
 
-		#ifdef MLK_PLAT_LINUX
+		#ifdef SQUID_PLAT_LINUX
 			template<typename T>
 			void SinCos(T x, T* sin, T* cos)
 			{

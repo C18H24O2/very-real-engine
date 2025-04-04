@@ -1,7 +1,7 @@
 #pragma once
 #include <Maths/EulerAngles.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	constexpr EulerAngles<T>::EulerAngles(DegreeAngle<T> P, DegreeAngle<T> Y, DegreeAngle<T> R) :

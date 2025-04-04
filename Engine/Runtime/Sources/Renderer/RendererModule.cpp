@@ -6,7 +6,7 @@
 #include <Core/Logs.hpp>
 #include <Utils/ConstMap.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	RendererModule* RendererModule::s_instance = nullptr;
 
@@ -36,9 +36,9 @@ namespace Mlk
 		if(drivers_scores.upper_bound(0) == drivers_scores.end())
 			FatalError("RendererModule : failed to find a suitable render driver");
 
-		#ifndef MLK_EMBEDDED_RENDERER_BACKENDS
+		#ifndef SQUID_EMBEDDED_RENDERER_BACKENDS
 			ConstMap<RendererDrivers, std::filesystem::path> drivers_paths = {
-				{ RendererDrivers::Vulkan, MLK_LIB_PREFIX "AkelVulkan" MLK_LIB_EXTENSION },
+				{ RendererDrivers::Vulkan, SQUID_LIB_PREFIX "AkelVulkan" SQUID_LIB_EXTENSION },
 			};
 		#endif
 
@@ -47,7 +47,7 @@ namespace Mlk
 			if(score < 1)
 				continue;
 
-			#ifndef MLK_EMBEDDED_RENDERER_BACKENDS
+			#ifndef SQUID_EMBEDDED_RENDERER_BACKENDS
 				LibLoader& loader = OSInstance::GetLibLoader();
 				LibModule module = loader.Load(drivers_paths.Find(driver)->second);
 				if(module == NullModule)
@@ -76,7 +76,7 @@ namespace Mlk
 				RHIRenderer* renderer = nullptr;
 			#endif
 
-			#ifndef MLK_EMBEDDED_RENDERER_BACKENDS
+			#ifndef SQUID_EMBEDDED_RENDERER_BACKENDS
 				DebugLog("RendererModule : loaded %", drivers_paths.Find(driver)->second);
 			#endif
 

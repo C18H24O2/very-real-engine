@@ -1,9 +1,9 @@
-#ifndef MLK_MATHS_VEC2_HPP__
-#define MLK_MATHS_VEC2_HPP__
+#ifndef SQUID_MATHS_VEC2_HPP__
+#define SQUID_MATHS_VEC2_HPP__
 
 #include <Maths/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template <typename T> struct Vec3;
 	template <typename T> struct Vec4;

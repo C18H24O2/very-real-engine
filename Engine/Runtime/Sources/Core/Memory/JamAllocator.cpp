@@ -3,7 +3,7 @@
 #include <Core/Logs.hpp>
 #include <Core/Memory/MemoryManager.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	void JamAllocator::Init(std::size_t size)
 	{
@@ -25,7 +25,7 @@ namespace Mlk
 	{
 		if(size < m_heap_size)
 		{
-			Warning("JamAllocator : Mlk's JamAllocators cannot reduce their size");
+			Warning("JamAllocator : Squid's JamAllocators cannot reduce their size");
 			return;
 		}
 

@@ -1,7 +1,7 @@
 #pragma once
 #include <Core/CLI.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	CommandLineInterface::CommandLineInterface()
 	{

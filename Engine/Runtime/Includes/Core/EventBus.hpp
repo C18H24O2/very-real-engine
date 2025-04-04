@@ -1,13 +1,13 @@
-#ifndef MLK_CORE_EVENT_BUS_HPP__
-#define MLK_CORE_EVENT_BUS_HPP__
+#ifndef SQUID_CORE_EVENT_BUS_HPP__
+#define SQUID_CORE_EVENT_BUS_HPP__
 
 #include <Core/PreCompiled.hpp>
 #include <Core/EventBase.hpp>
 #include <Core/EventListener.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_CORE_API EventBus
+	class SQUID_CORE_API EventBus
 	{
 		public:
 			EventBus() = delete;

@@ -1,9 +1,9 @@
-#ifndef MLK_UTILS_ANSI_HPP__
-#define MLK_UTILS_ANSI_HPP__
+#ifndef SQUID_UTILS_ANSI_HPP__
+#define SQUID_UTILS_ANSI_HPP__
 
 #include <Utils/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	enum class Ansi : std::uint32_t
 	{

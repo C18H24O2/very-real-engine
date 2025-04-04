@@ -3,21 +3,21 @@
 #include <Core/Core.hpp>
 #include <Core/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	class JamAllocator;
 	class FixedAllocator;
 
 	namespace Memory::Internal
 	{
-		struct MLK_CORE_API ControlUnit
+		struct SQUID_CORE_API ControlUnit
 		{
 			std::vector<std::pair<JamAllocator*, bool>> jam_stack;
 			std::vector<std::pair<FixedAllocator*, bool>> fixed_stack;
 		};
-		MLK_CORE_API void* Alloc(std::size_t size, bool is_class);
-		MLK_CORE_API std::shared_ptr<ControlUnit> GetControlUnit();
-		MLK_CORE_API void Dealloc(void* ptr);
+		SQUID_CORE_API void* Alloc(std::size_t size, bool is_class);
+		SQUID_CORE_API std::shared_ptr<ControlUnit> GetControlUnit();
+		SQUID_CORE_API void Dealloc(void* ptr);
 	}
 
 	template<typename T, typename ... Args>

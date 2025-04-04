@@ -1,9 +1,9 @@
-#ifndef MLK_CORE_CLI_HPP__
-#define MLK_CORE_CLI_HPP__
+#ifndef SQUID_CORE_CLI_HPP__
+#define SQUID_CORE_CLI_HPP__
 
 #include <Core/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	class CommandLineInterface
 	{

@@ -1,9 +1,9 @@
-#ifndef MLK_UTILS_CONST_MAP_HPP__
-#define MLK_UTILS_CONST_MAP_HPP__
+#ifndef SQUID_UTILS_CONST_MAP_HPP__
+#define SQUID_UTILS_CONST_MAP_HPP__
 
 #include <Utils/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename Key, typename Value>
 	class ConstMap

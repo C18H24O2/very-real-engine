@@ -1,4 +1,4 @@
-# very-mauvais-engine
+# SquidEngine
 
 > Create and implement a library containing all necessary tools, notably a graphics engine and a physics engine.
 

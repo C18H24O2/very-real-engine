@@ -1,7 +1,7 @@
 #include <Platform/Unix/UnixLibLoader.hpp>
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	[[nodiscard]]
 	LibFunc UnixLibLoader::GetSymbol(LibModule module, const char* symbol) const

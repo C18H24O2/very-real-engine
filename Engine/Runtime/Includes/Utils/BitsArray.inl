@@ -3,7 +3,7 @@
 
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	void BitsArray::Init(std::size_t bits_n)
 	{

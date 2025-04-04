@@ -1,5 +1,5 @@
-#ifndef MLK_RHI_ENUMS_HPP__
-#define MLK_RHI_ENUMS_HPP__
+#ifndef SQUID_RHI_ENUMS_HPP__
+#define SQUID_RHI_ENUMS_HPP__
 
 #include <Renderer/PreCompiled.hpp>
 
@@ -7,7 +7,7 @@
 	#undef None
 #endif
 
-namespace Mlk
+namespace Squid
 {
 	enum class BufferType
 	{

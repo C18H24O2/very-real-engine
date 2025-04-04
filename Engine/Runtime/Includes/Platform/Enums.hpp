@@ -1,9 +1,9 @@
-#ifndef MLK_PLATFORM_ENUMS_HPP__
-#define MLK_PLATFORM_ENUMS_HPP__
+#ifndef SQUID_PLATFORM_ENUMS_HPP__
+#define SQUID_PLATFORM_ENUMS_HPP__
 
 #include <Platform/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	enum WindowStyleBits
 	{

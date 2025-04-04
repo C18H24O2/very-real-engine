@@ -3,7 +3,7 @@
 #include <Core/Application.hpp>
 #include <Platform/Unix/UnixInstance.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	constexpr const int UNIX_PATH_MAX = 1024;
 

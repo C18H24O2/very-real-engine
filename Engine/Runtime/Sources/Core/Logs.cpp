@@ -3,7 +3,7 @@
 #include <Core/EventBase.hpp>
 #include <Core/EventBus.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	namespace Internal
 	{
@@ -22,13 +22,13 @@ namespace Mlk
 	{
 		using namespace std::literals;
 
-		#ifndef MLK_CORE_DEBUG
-			if(type == LogType::Debug)
+		#ifndef SQUID_CORE_DEBUG
+			if(type == LogType::Debug && std::getenv("SQUID_DEBUG_LOGS") == nullptr)
 				return;
 		#endif
 
 		std::string code_infos;
-		#ifdef MLK_CORE_DEBUG
+		#ifdef SQUID_CORE_DEBUG
 			if((type == LogType::Error || type == LogType::FatalError) && !file.empty() && !function.empty())
 			{
 				code_infos += "{in file '"s;
@@ -41,11 +41,11 @@ namespace Mlk
 
 		switch(type)
 		{
-			case LogType::Debug: std::cout << Ansi::blue << "[Mlk Debug] " << Ansi::def << code_infos << message << '\n'; break;
-			case LogType::Message: std::cout << Ansi::blue << "[Mlk Message] " << Ansi::def << code_infos << message << '\n'; break;
-			case LogType::Warning: std::cout << Ansi::magenta << "[Mlk Warning] " << Ansi::def << code_infos << message << '\n'; break;
-			case LogType::Error: std::cerr << Ansi::red << "[Mlk Error] " << Ansi::def << code_infos << message << '\n'; break;
-			case LogType::FatalError: std::cerr << Ansi::red << "[Mlk Fatal Error] " << Ansi::def << code_infos << message << '\n'; break;
+			case LogType::Debug: std::cout << Ansi::blue << "[Squid Debug] " << Ansi::def << code_infos << message << '\n'; break;
+			case LogType::Message: std::cout << Ansi::blue << "[Squid Message] " << Ansi::def << code_infos << message << '\n'; break;
+			case LogType::Warning: std::cout << Ansi::magenta << "[Squid Warning] " << Ansi::def << code_infos << message << '\n'; break;
+			case LogType::Error: std::cerr << Ansi::red << "[Squid Error] " << Ansi::def << code_infos << message << '\n'; break;
+			case LogType::FatalError: std::cerr << Ansi::red << "[Squid Fatal Error] " << Ansi::def << code_infos << message << '\n'; break;
 
 			default: break;
 		}

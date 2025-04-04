@@ -2,7 +2,7 @@
 #include <Core/Memory/MemoryManager.hpp>
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	void FixedAllocator::Init(std::size_t block_size, std::size_t num_blocks)
 	{

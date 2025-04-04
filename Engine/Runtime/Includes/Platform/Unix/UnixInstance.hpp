@@ -1,12 +1,12 @@
-#ifndef MLK_DRIVERS_UNIX_INSTANCE_HPP__
-#define MLK_DRIVERS_UNIX_INSTANCE_HPP__
+#ifndef SQUID_DRIVERS_UNIX_INSTANCE_HPP__
+#define SQUID_DRIVERS_UNIX_INSTANCE_HPP__
 
 #include <Platform/Unix/PreCompiled.hpp>
 #include <Core/OS/OSInstance.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_UNIX_API UnixInstance final : public OSInstance
+	class SQUID_UNIX_API UnixInstance final : public OSInstance
 	{
 		public:
 			UnixInstance() = default;

@@ -1,12 +1,12 @@
-#ifndef MLK_CORE_EVENT_LISTENER_HPP__
-#define MLK_CORE_EVENT_LISTENER_HPP__
+#ifndef SQUID_CORE_EVENT_LISTENER_HPP__
+#define SQUID_CORE_EVENT_LISTENER_HPP__
 
 #include <Core/PreCompiled.hpp>
 #include <Core/EventBase.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_CORE_API EventListener
+	class SQUID_CORE_API EventListener
 	{
 		public:
 			EventListener() = delete;

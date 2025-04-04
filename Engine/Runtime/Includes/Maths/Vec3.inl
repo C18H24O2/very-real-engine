@@ -1,7 +1,7 @@
 #pragma once
 #include <Maths/Vec3.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	constexpr Vec3<T>::Vec3(T X, T Y, T Z) : x(X), y(Y), z(Z) {}
@@ -144,14 +144,14 @@ namespace Mlk
 	template<typename T>
 	constexpr T& Vec3<T>::operator[](std::size_t i)
 	{
-		Mlk::Assert(i < 3, "index out of range");
+		Squid::Assert(i < 3, "index out of range");
 		return *(&x + i);
 	}
 
 	template<typename T>
 	constexpr const T& Vec3<T>::operator[](std::size_t i) const
 	{
-		Mlk::Assert(i < 3, "index out of range");
+		Squid::Assert(i < 3, "index out of range");
 		return *(&x + i);
 	}
 

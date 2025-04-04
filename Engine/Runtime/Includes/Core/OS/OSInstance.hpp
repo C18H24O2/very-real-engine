@@ -1,11 +1,11 @@
-#ifndef MLK_CORE_OS_INSTANCE_HPP__
-#define MLK_CORE_OS_INSTANCE_HPP__
+#ifndef SQUID_CORE_OS_INSTANCE_HPP__
+#define SQUID_CORE_OS_INSTANCE_HPP__
 
 #include <Core/OS/LibLoader.hpp>
 #include <Core/PreCompiled.hpp>
 #include <Maths/Vec4.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	class OSInstance
 	{

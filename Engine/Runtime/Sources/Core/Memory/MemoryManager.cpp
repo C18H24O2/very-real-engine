@@ -7,7 +7,7 @@
 #include <Core/EventBase.hpp>
 #include <Core/EventBus.hpp>
 
-namespace Mlk::Memory::Internal
+namespace Squid::Memory::Internal
 {
 	static JamAllocator jam;
 	static FixedAllocator fixed1;

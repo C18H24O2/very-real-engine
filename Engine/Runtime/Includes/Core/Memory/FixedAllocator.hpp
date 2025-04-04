@@ -3,9 +3,9 @@
 #include <Core/PreCompiled.hpp>
 #include <Utils/BitsArray.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_CORE_API FixedAllocator
+	class SQUID_CORE_API FixedAllocator
     {
 		public:
 			FixedAllocator() = default;

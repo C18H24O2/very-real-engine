@@ -1,5 +1,5 @@
-#ifndef MLK_CORE_BUNDLE_HPP__
-#define MLK_CORE_BUNDLE_HPP__
+#ifndef SQUID_CORE_BUNDLE_HPP__
+#define SQUID_CORE_BUNDLE_HPP__
 
 #include <Core/Application.hpp>
 #include <Core/Core.hpp>

@@ -2,7 +2,7 @@
 
 #include <Core/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template <typename T>
 	class WeakPtr

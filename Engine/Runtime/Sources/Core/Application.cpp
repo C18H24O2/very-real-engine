@@ -2,7 +2,7 @@
 #include <Core/CoreModule.hpp>
 #include <Core/Application.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	Application* Application::s_instance = nullptr;
 

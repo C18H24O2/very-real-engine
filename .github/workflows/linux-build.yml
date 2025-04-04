@@ -89,5 +89,5 @@ jobs:
         key: assets-${{ hashFiles('assets/examples_version.txt', 'assets/unittests_version.txt') }}
 
     # Build the engine
-    - name: Build Mlk
+    - name: Build Squid
       run: xmake --yes

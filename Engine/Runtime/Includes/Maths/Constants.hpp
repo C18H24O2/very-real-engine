@@ -1,9 +1,9 @@
-#ifndef MLK_MATHS_MATHS_CONSTANTS_HPP__
-#define MLK_MATHS_MATHS_CONSTANTS_HPP__
+#ifndef SQUID_MATHS_MATHS_CONSTANTS_HPP__
+#define SQUID_MATHS_MATHS_CONSTANTS_HPP__
 
 #include <Maths/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T> constexpr std::size_t BitCount = CHAR_BIT * sizeof(T);
 

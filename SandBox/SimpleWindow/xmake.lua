@@ -1,5 +1,5 @@
 target("SimpleWindow")
-	add_deps("MlkPlatform")
+	add_deps("SquidPlatform")
 	if is_plat("linux") then
 		set_extension(".x86_64")
 	end

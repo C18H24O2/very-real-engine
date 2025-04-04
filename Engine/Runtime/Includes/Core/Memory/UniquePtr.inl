@@ -3,7 +3,7 @@
 #include <Core/Memory/MemoryManager.hpp>
 #include <utility>
 
-namespace Mlk
+namespace Squid
 {
 	template <typename T>
 	constexpr UniquePtr<T>::UniquePtr() noexcept {}

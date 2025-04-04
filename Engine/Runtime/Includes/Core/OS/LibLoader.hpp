@@ -1,16 +1,16 @@
-#ifndef MLK_CORE_OS_LIB_LOADER_HPP__
-#define MLK_CORE_OS_LIB_LOADER_HPP__
+#ifndef SQUID_CORE_OS_LIB_LOADER_HPP__
+#define SQUID_CORE_OS_LIB_LOADER_HPP__
 
 #include <Core/PreCompiled.hpp>
 #include <Utils/NonCopyable.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	using LibFunc = void (*)(void);
 	using LibModule = void*;
 	constexpr LibModule NullModule = nullptr;
 
-	class MLK_CORE_API LibLoader : public NonCopyable
+	class SQUID_CORE_API LibLoader : public NonCopyable
 	{
 		public:
 			LibLoader() = default;

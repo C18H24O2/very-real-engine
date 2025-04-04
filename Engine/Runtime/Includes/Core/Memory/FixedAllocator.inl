@@ -2,7 +2,7 @@
 #include <Core/Memory/FixedAllocator.hpp>
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T, typename ... Args>
 	T* FixedAllocator::Alloc(Args&& ... args)

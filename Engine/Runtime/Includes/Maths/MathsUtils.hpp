@@ -1,9 +1,9 @@
-#ifndef MLK_MATHS_MATHS_UTILS__
-#define MLK_MATHS_MATHS_UTILS__
+#ifndef SQUID_MATHS_MATHS_UTILS__
+#define SQUID_MATHS_MATHS_UTILS__
 
 #include <Maths/PreCompiled.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	[[nodiscard]] constexpr T Mod(T x, T y) noexcept;

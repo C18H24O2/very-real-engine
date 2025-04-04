@@ -1,13 +1,13 @@
-#ifndef MLK_GRAPHICS_MODULE_HPP__
-#define MLK_GRAPHICS_MODULE_HPP__
+#ifndef SQUID_GRAPHICS_MODULE_HPP__
+#define SQUID_GRAPHICS_MODULE_HPP__
 
 #include <Graphics/PreCompiled.hpp>
 #include <Core/Module.hpp>
 #include <Utils/TypeList.hpp>
 
-namespace Mlk
+namespace Squid
 {
-	class MLK_GRAPHICS_API GraphicsModule : public Module
+	class SQUID_GRAPHICS_API GraphicsModule : public Module
 	{
 		public:
 			using Dependencies = TypeList<class CoreModule, class RendererModule>;

@@ -1,7 +1,7 @@
 #include <Core/EventBus.hpp>
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	void EventBus::Send(const std::string& listener_name, const EventBase& event)
 	{

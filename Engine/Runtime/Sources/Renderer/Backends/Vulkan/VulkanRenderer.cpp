@@ -1,5 +1,5 @@
 #include <Renderer/Backends/Vulkan/VulkanRenderer.hpp>
 
-namespace Mlk
+namespace Squid
 {
 }

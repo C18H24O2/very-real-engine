@@ -1,10 +1,10 @@
-#ifndef MLK_CORE_ENGINE_CONFIG_HPP__
-#define MLK_CORE_ENGINE_CONFIG_HPP__
+#ifndef SQUID_CORE_ENGINE_CONFIG_HPP__
+#define SQUID_CORE_ENGINE_CONFIG_HPP__
 
 #include <Core/PreCompiled.hpp>
 #include <Renderer/Enums.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	struct EngineConfig
 	{

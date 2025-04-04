@@ -1,7 +1,7 @@
 #pragma once
 #include <Core/ComponentStack.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T, typename ... Args>
 	T& ComponentStack::AddComponent(Args&& ... args)

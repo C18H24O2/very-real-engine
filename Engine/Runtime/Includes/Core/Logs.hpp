@@ -1,12 +1,12 @@
 #pragma once
 
-#ifndef MLK_CORE_LOGS_HPP__
-#define MLK_CORE_LOGS_HPP__
+#ifndef SQUID_CORE_LOGS_HPP__
+#define SQUID_CORE_LOGS_HPP__
 
 #include <Core/PreCompiled.hpp>
 #include <Core/Enums.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename... Args>
 	void DebugLog(unsigned int line, std::string_view file, std::string_view function, std::string message, const Args&... args);
@@ -26,7 +26,7 @@ namespace Mlk
 	template<typename... Args>
 	void Verify(bool cond, unsigned int line, std::string_view file, std::string_view function, std::string message, const Args&... args);
 
-	class MLK_CORE_API Logs
+	class SQUID_CORE_API Logs
 	{
 		public:
 			Logs() = delete;
@@ -37,7 +37,7 @@ namespace Mlk
 			~Logs() = delete;
 	};
 
-	#if defined(MLK_CORE_DEBUG) || defined(MLK_FORCE_ENABLE_ASSERTS)
+	#if defined(SQUID_CORE_DEBUG) || defined(SQUID_FORCE_ENABLE_ASSERTS)
 		template<typename... Args>
 		void Assert(bool cond, unsigned int line, std::string_view file, std::string_view function, std::string message, const Args&... args);
 	#else
@@ -48,28 +48,28 @@ namespace Mlk
 
 #include <Core/Logs.inl>
 
-namespace Mlk
+namespace Squid
 {
 	#undef  DebugLog
-	#define DebugLog(...) DebugLog(__LINE__, __FILE__, MLK_FUNC_SIG, __VA_ARGS__)
+	#define DebugLog(...) DebugLog(__LINE__, __FILE__, SQUID_FUNC_SIG, __VA_ARGS__)
 
 	#undef  Message
-	#define Message(...) Message(__LINE__, __FILE__, MLK_FUNC_SIG, __VA_ARGS__)
+	#define Message(...) Message(__LINE__, __FILE__, SQUID_FUNC_SIG, __VA_ARGS__)
 
 	#undef  Warning
-	#define Warning(...) Warning(__LINE__, __FILE__, MLK_FUNC_SIG, __VA_ARGS__)
+	#define Warning(...) Warning(__LINE__, __FILE__, SQUID_FUNC_SIG, __VA_ARGS__)
 
 	#undef  Error
-	#define Error(...) Error(__LINE__, __FILE__, MLK_FUNC_SIG, __VA_ARGS__)
+	#define Error(...) Error(__LINE__, __FILE__, SQUID_FUNC_SIG, __VA_ARGS__)
 
 	#undef  FatalError
-	#define FatalError(...) FatalError(__LINE__, __FILE__, MLK_FUNC_SIG, __VA_ARGS__)
+	#define FatalError(...) FatalError(__LINE__, __FILE__, SQUID_FUNC_SIG, __VA_ARGS__)
 
 	#undef  Verify
-	#define Verify(cond, ...) Verify(cond, __LINE__, __FILE__, MLK_FUNC_SIG, __VA_ARGS__)
+	#define Verify(cond, ...) Verify(cond, __LINE__, __FILE__, SQUID_FUNC_SIG, __VA_ARGS__)
 
 	#undef  Assert
-	#define Assert(cond, ...) Assert(cond, __LINE__, __FILE__, MLK_FUNC_SIG, __VA_ARGS__)
+	#define Assert(cond, ...) Assert(cond, __LINE__, __FILE__, SQUID_FUNC_SIG, __VA_ARGS__)
 }
 
 #endif

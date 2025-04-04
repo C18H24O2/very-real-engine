@@ -1,7 +1,7 @@
 #pragma once
 #include <Maths/Vec2.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	constexpr Vec2<T>::Vec2(T X, T Y) : x(X), y(Y) {}
@@ -115,14 +115,14 @@ namespace Mlk
 	template<typename T>
 	constexpr T& Vec2<T>::operator[](std::size_t i)
 	{
-		Mlk::Assert(i < 2, "index out of range");
+		Squid::Assert(i < 2, "index out of range");
 		return *(&x + i);
 	}
 
 	template<typename T>
 	constexpr T Vec2<T>::operator[](std::size_t i) const
 	{
-		Mlk::Assert(i < 2, "index out of range");
+		Squid::Assert(i < 2, "index out of range");
 		return *(&x + i);
 	}
 

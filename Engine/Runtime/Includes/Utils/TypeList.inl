@@ -1,7 +1,7 @@
 #pragma once
 #include <Utils/TypeList.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	namespace Internal
 	{

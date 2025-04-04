@@ -1,7 +1,7 @@
 #pragma once
 #include <Platform/WindowComponent.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	void WindowComponent::OnFixedUpdate() noexcept
 	{

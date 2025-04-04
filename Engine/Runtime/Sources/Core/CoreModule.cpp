@@ -1,7 +1,7 @@
 #include <Core/CoreModule.hpp>
 #include <Core/Logs.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	namespace Memory::Internal
 	{

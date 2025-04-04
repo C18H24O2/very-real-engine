@@ -1,13 +1,13 @@
-#include <MlkCore.hpp>
-#include <MlkPlatform.hpp>
-#include <MlkEntryPoint.hpp>
+#include <SquidCore.hpp>
+#include <SquidPlatform.hpp>
+#include <SquidEntryPoint.hpp>
 
-void MlkSetupEngineConfig(Mlk::EngineConfig& config)
+void SquidSetupEngineConfig(Squid::EngineConfig& config)
 {
 }
 
-void MlkSetupApplication(Mlk::Application& app)
+void SquidSetupApplication(Squid::Application& app)
 {
-	app.LoadEngineModule<Mlk::PlatformModule>();
-	app.AddComponent<Mlk::WindowComponent>(1250, 780, "My Window", Mlk::WindowClosable | Mlk::WindowResizable);
+	app.LoadEngineModule<Squid::PlatformModule>();
+	app.AddComponent<Squid::WindowComponent>(1250, 780, "My Window", Squid::WindowClosable | Squid::WindowResizable);
 }

@@ -1,7 +1,7 @@
 #pragma once
 #include <Utils/NonOwningPtr.hpp>
 
-namespace Mlk
+namespace Squid
 {
 	template<typename T>
 	NonOwningPtr<T>::NonOwningPtr(T* ptr) : m_ptr(ptr) {}

@@ -7,12 +7,12 @@ set_allowedplats("windows", "mingw", "linux", "macosx", "wasm")
 set_allowedmodes("debug", "release", "releasedbg")
 set_defaultmode("releasedgb")
 
-set_project("MlkEngine")
+set_project("SquidEngine")
 
 if is_mode("debug") then
-	add_defines("MLK_DEBUG")
+	add_defines("SQUID_DEBUG")
 else
-	add_defines("MLK_RELEASE")
+	add_defines("SQUID_RELEASE")
 	set_fpmodels("fast")
 	add_vectorexts("sse", "sse2", "sse3", "ssse3")
 end
@@ -29,7 +29,7 @@ set_optimize("fastest")
 local renderer_backends = {
 	Vulkan = {
 		option = "vulkan",
-		deps = {"MlkRenderer"},
+		deps = {"SquidRenderer"},
 		packages = {"vulkan-headers"},
 		dir = "Renderer/Backends/",
 		custom = function()
@@ -65,23 +65,23 @@ local modules = {
 	},
 	Graphics = {
 		option = "graphics",
-		deps = {"MlkRenderer"},
+		deps = {"SquidRenderer"},
 		custom = function()
 			add_headerfiles("Engine/Runtime/Includes/Maths/**.h", "Engine/Runtime/Includes/Maths/**.inl")
 		end
 	},
 	Renderer = {
 		option = "renderer",
-		deps = {"MlkCore", "MlkPlatform"},
+		deps = {"SquidCore", "SquidPlatform"},
 		public_packages = {"nzsl"},
 		custom = function()
 			if has_config("embed_rendererbackends", "static") then
-				add_defines("MLK_EMBEDDED_RENDERER_BACKENDS")
+				add_defines("SQUID_EMBEDDED_RENDERER_BACKENDS")
 				for name, module in table.orderpairs(renderer_backends) do
 					if not module.option or has_config(module.option) then
 						if module.deps then
 							module = table.clone(module, 1) -- swallow clone
-							module.deps = table.remove_if(table.clone(module.deps), function(idx, dep) return dep == "MlkRenderer" end)
+							module.deps = table.remove_if(table.clone(module.deps), function(idx, dep) return dep == "SquidRenderer" end)
 							if #module.deps == 0 then 
 								module.deps = nil 
 							end
@@ -94,7 +94,7 @@ local modules = {
 	},
 	Platform = {
 		option = "platform",
-		deps = {"MlkCore"}
+		deps = {"SquidCore"}
 	},
 }
 
@@ -142,7 +142,7 @@ end
 add_rules("build.rendererplugins")
 
 option("static", { description = "Build the engine statically (implies embed_rendererbackends)", default = is_plat("wasm") or false })
-option("embed_rendererbackends", { description = "Embed renderer backend code into MlkRenderer instead of loading them dynamically", default = is_plat("wasm") or false })
+option("embed_rendererbackends", { description = "Embed renderer backend code into SquidRenderer instead of loading them dynamically", default = is_plat("wasm") or false })
 option("unitybuild", { description = "Build the engine using unity build", default = false })
 
 if has_config("renderer") then
@@ -158,13 +158,13 @@ if has_config("vulkan") and not is_plat("wasm") then
 end
 
 function ModuleTargetConfig(name, module)
-	add_defines("MLK_" .. name:upper() .. "_BUILD")
+	add_defines("SQUID_" .. name:upper() .. "_BUILD")
 	if is_mode("debug") then
-		add_defines("MLK_" .. name:upper() .. "_DEBUG")
+		add_defines("SQUID_" .. name:upper() .. "_DEBUG")
 	end
 
 	if is_plat("wasm") or has_config("static") then
-		add_defines("MLK_".. name:upper() .. "_STATIC", { public = true })
+		add_defines("SQUID_".. name:upper() .. "_STATIC", { public = true })
 	end
 
 	-- Add header and source files
@@ -231,7 +231,7 @@ for name, module in pairs(modules) do
 		goto continue
 	end
 
-	target("Mlk" .. name, function()
+	target("Squid" .. name, function()
 		set_group("Modules")
 
 		-- handle shared/static kind
@@ -277,7 +277,7 @@ rule("build.rendererplugins")
 
 		local deps = table.wrap(target:get("deps"))
 
-		if target:kind() == "binary" and table.contains(deps, "MlkRenderer") then
+		if target:kind() == "binary" and table.contains(deps, "SquidRenderer") then
 			for name, _ in pairs(renderer_backends) do
 				local depName = "Akel" .. name
 				if not table.contains(deps, depName) then -- don't overwrite dependency
