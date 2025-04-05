@@ -4,6 +4,7 @@
 #include <Core/PreCompiled.hpp>
 #include <Core/Module.hpp>
 #include <Core/Ticks.hpp>
+#include <Core/VirtualFileSystem.hpp>
 #include <Utils/TypeList.hpp>
 
 namespace Squid
@@ -18,6 +19,7 @@ namespace Squid
 			static inline bool IsInit() noexcept { return s_instance != nullptr; }
 			static CoreModule& Get();
 
+			inline VirtualFileSystem& GetVirtualFileSystem() { return m_filesystem; }
 			inline Ticks& GetTicksReference() { return m_ticks; }
 
 			~CoreModule() override;
@@ -25,7 +27,10 @@ namespace Squid
 		private:
 			static CoreModule* s_instance;
 			Ticks m_ticks;
+			VirtualFileSystem m_filesystem;
 	};
+
+	SQUID_FORCEINLINE VirtualFileSystem& GetVFS() { Assert(CoreModule::IsInit(), "CoreModule is not init"); return CoreModule::Get().GetVirtualFileSystem(); }
 }
 
 #endif
