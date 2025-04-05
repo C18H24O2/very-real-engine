@@ -1,7 +1,7 @@
 #include <Core/CLI.hpp>
-#include <Platform/Unix/UnixLibLoader.hpp>
+#include <Core/Unix/UnixLibLoader.hpp>
 #include <Core/Application.hpp>
-#include <Platform/Unix/UnixInstance.hpp>
+#include <Core/Unix/UnixInstance.hpp>
 
 namespace Squid
 {

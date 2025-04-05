@@ -108,4 +108,4 @@ namespace Squid
 
 #include <Maths/Vec2.inl>
 
-#endif // __AK_VEC2__
+#endif // __SQUID_VEC2__

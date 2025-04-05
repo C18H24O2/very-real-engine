@@ -5,7 +5,7 @@
 #include <Core/Application.hpp>
 #include <Core/CLI.hpp>
 #include <Core/EngineConfig.hpp>
-#include <Platform/Unix/UnixInstance.hpp>
+#include <Core/Unix/UnixInstance.hpp>
 
 // Setup functions defined by the user
 extern void SquidSetupApplication(Squid::Application& app);

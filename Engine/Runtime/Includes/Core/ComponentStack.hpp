@@ -33,6 +33,7 @@ namespace Squid
 			template<typename T>
 			inline T GetComponentAs(std::size_t index);
 
+			// snake_case names to be able to use range based loops
 			inline iterator begin() { return m_components.begin(); }
 			inline iterator end() { return m_components.end(); }
 			inline reverse_iterator rbegin() { return m_components.rbegin(); }

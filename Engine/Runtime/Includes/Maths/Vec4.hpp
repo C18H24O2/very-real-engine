@@ -106,5 +106,5 @@ namespace Squid
 
 #include <Maths/Vec4.inl>
 
-#endif // __AK_VEC4__
+#endif // __SQUID_VEC4__
 

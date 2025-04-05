@@ -38,7 +38,7 @@ namespace Squid
 
 		#ifndef SQUID_EMBEDDED_RENDERER_BACKENDS
 			ConstMap<RendererDrivers, std::filesystem::path> drivers_paths = {
-				{ RendererDrivers::Vulkan, SQUID_LIB_PREFIX "AkelVulkan" SQUID_LIB_EXTENSION },
+				{ RendererDrivers::Vulkan, SQUID_LIB_PREFIX "SquidelVulkan" SQUID_LIB_EXTENSION },
 			};
 		#endif
 
@@ -56,7 +56,7 @@ namespace Squid
 					continue;
 				}
 
-				DriverLoaderFunctor loader_function = reinterpret_cast<DriverLoaderFunctor>(loader.GetSymbol(module, "AkelLoadRendererDriver"));
+				DriverLoaderFunctor loader_function = reinterpret_cast<DriverLoaderFunctor>(loader.GetSymbol(module, "SquidelLoadRendererDriver"));
 				if(!loader_function)
 				{
 					Warning("RendererModule : cannot load %, no loading symbol found, falling back...", drivers_paths.Find(driver)->second);

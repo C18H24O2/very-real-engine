@@ -125,4 +125,4 @@ namespace Squid
 
 #include <Maths/Vec3.inl>
 
-#endif // __AK_VEC3__
+#endif // __SQUID_VEC3__

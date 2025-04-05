@@ -1,7 +1,7 @@
 #ifndef SQUID_DRIVERS_UNIX_INSTANCE_HPP__
 #define SQUID_DRIVERS_UNIX_INSTANCE_HPP__
 
-#include <Platform/Unix/PreCompiled.hpp>
+#include <Core/Unix/PreCompiled.hpp>
 #include <Core/OS/OSInstance.hpp>
 
 namespace Squid

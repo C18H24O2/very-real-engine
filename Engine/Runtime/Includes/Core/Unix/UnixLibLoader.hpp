@@ -1,7 +1,7 @@
 #ifndef SQUID_UNIX_LIB_LOADER_HPP__
 #define SQUID_UNIX_LIB_LOADER_HPP__
 
-#include <Platform/Unix/PreCompiled.hpp>
+#include <Core/Unix/PreCompiled.hpp>
 #include <Core/OS/LibLoader.hpp>
 
 namespace Squid

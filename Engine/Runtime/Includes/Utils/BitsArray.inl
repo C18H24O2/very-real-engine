@@ -25,7 +25,7 @@ namespace Squid
 			Error("Bits Array set : index out of range");
 			return;
 		}
-		#ifdef AK_64BITS
+		#ifdef SQUID_64BITS
 			const uintsys_t mask = 1ULL << (index % nbits);
 		#else
 			const uintsys_t mask = 1U << (index % nbits);
@@ -41,7 +41,7 @@ namespace Squid
 			Error("Bits Array get : index out of range");
 			return false;
 		}
-		#ifdef AK_64BITS
+		#ifdef SQUID_64BITS
 			return m_pool[i] & (1ULL << (index % nbits));
 		#else
 			return m_pool[i] & (1U << (index % nbits));

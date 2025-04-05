@@ -279,7 +279,7 @@ rule("build.rendererplugins")
 
 		if target:kind() == "binary" and table.contains(deps, "SquidRenderer") then
 			for name, _ in pairs(renderer_backends) do
-				local depName = "Akel" .. name
+				local depName = "Squidel" .. name
 				if not table.contains(deps, depName) then -- don't overwrite dependency
 					target:add("deps", depName, {inherit = false})
 				end
