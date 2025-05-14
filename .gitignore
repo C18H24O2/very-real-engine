@@ -1,4 +1,5 @@
 .xmake/
+.direnv/
 .vs/
 .cache/
 build/
