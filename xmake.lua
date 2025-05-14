@@ -1,11 +1,9 @@
-add_repositories("nazara-engine-repo https://github.com/NazaraEngine/xmake-repo")
-
 set_languages("cxx20")
 
 add_rules("mode.debug", "mode.release", "mode.releasedbg")
 set_allowedplats("windows", "mingw", "linux", "macosx", "wasm")
 set_allowedmodes("debug", "release", "releasedbg")
-set_defaultmode("releasedgb")
+set_defaultmode("releasedbg")
 
 set_project("SquidEngine")
 
@@ -146,7 +144,7 @@ option("embed_rendererbackends", { description = "Embed renderer backend code in
 option("unitybuild", { description = "Build the engine using unity build", default = false })
 
 if has_config("renderer") then
-	add_requires("nzsl >=2023.12.31", { debug = is_mode("debug"), configs = { symbols = not is_mode("release"), shared = not is_plat("wasm", "android") and not has_config("static") } })
+	add_requires("nzsl", { debug = is_mode("debug"), configs = { symbols = not is_mode("release"), shared = not is_plat("wasm", "android") and not has_config("static") } })
 end
 
 if is_plat("linux") then
