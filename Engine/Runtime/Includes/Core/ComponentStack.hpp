@@ -29,9 +29,11 @@ namespace Squid
 			inline ComponentBase* GetComponent(std::size_t index);
 
 			template<typename T>
-			inline T GetComponentAs(const std::string& name);
+			inline T& GetComponentAs(const std::string& name);
 			template<typename T>
-			inline T GetComponentAs(std::size_t index);
+			inline T& GetComponentAs(std::size_t index);
+			template<typename T>
+			inline T& GetComponent();
 
 			// snake_case names to be able to use range based loops
 			inline iterator begin() { return m_components.begin(); }

@@ -30,7 +30,10 @@ pkgs.mkShell {
     vulkan-loader
     vulkan-validation-layers
 
+    clang-tools
+
     python313Full.debug
+    sdl3.dev
 
     xmake
   ];

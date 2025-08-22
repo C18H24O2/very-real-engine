@@ -7,7 +7,8 @@
 
 namespace Squid
 {
-	class SQUID_CORE_API EventBus
+	template<typename T>
+	class SQUID_CORE_API EventBus<T>
 	{
 		public:
 			EventBus() = delete;

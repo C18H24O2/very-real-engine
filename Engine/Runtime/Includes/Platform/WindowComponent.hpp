@@ -2,9 +2,11 @@
 #define SQUID_PLATFORM_WINDOW_COMPONENT_HPP__
 
 #include <Platform/PreCompiled.hpp>
+
+#include <Core/Memory/UniquePtr.hpp>
 #include <Core/ComponentBase.hpp>
 #include <Platform/Enums.hpp>
-#include <Maths/Vec2.hpp>
+#include <Platform/Window.hpp>
 
 namespace Squid
 {
@@ -18,8 +20,6 @@ namespace Squid
 			SQUID_FORCEINLINE void OnFixedUpdate() noexcept override;
 			void OnQuit() noexcept override;
 
-			SQUID_FORCEINLINE std::size_t GetWidth() const noexcept;
-			SQUID_FORCEINLINE std::size_t GetHeight() const noexcept;
 			SQUID_FORCEINLINE void SetPosition(const Vec2i& position) noexcept;
 			SQUID_FORCEINLINE void SetPosition(std::uint32_t posx, std::uint32_t posy) noexcept;
 			SQUID_FORCEINLINE void SetSize(const Vec2i& size) noexcept;
@@ -36,6 +36,9 @@ namespace Squid
 			SQUID_FORCEINLINE const Vec2i& GetMaxSize() const noexcept;
 
 			~WindowComponent() = default;
+
+		private:
+			UniquePtr<Window> m_window;
 	};
 }
 

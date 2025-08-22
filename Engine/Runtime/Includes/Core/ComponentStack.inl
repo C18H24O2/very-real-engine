@@ -15,16 +15,28 @@ namespace Squid
 	}
 
 	template<typename T>
-	T ComponentStack::GetComponentAs(const std::string& name)
+	T& ComponentStack::GetComponentAs(const std::string& name)
 	{
-		static_assert(!std::is_pointer_v<T>, "Components can only be casted to pointers");
+		static_assert(!std::is_pointer_v<T>, "Components can not be casted to pointers");
 		return static_cast<T>(GetComponent(name));
 	}
 	
 	template<typename T>
-	T ComponentStack::GetComponentAs(std::size_t index)
+	T& ComponentStack::GetComponentAs(std::size_t index)
 	{
-		static_assert(!std::is_pointer_v<T>, "Components can only be casted to pointers");
+		static_assert(!std::is_pointer_v<T>, "Components can not be casted to pointers");
 		return static_cast<T>(GetComponent(index));
+	}
+
+	template<typename T>
+	T& ComponentStack::GetComponent()
+	{
+		static_assert(!std::is_pointer_v<T>, "Components can not be casted to pointers");
+		for (auto& component : m_components)
+		{
+			if (auto casted = dynamic_cast<T*>(component))
+				return *casted;
+		}
+		return nullptr;
 	}
 }

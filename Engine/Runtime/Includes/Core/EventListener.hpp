@@ -23,4 +23,8 @@ namespace Squid
 	};
 }
 
+void test() {
+
+}
+
 #endif
