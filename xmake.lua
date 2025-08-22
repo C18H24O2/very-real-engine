@@ -1,4 +1,4 @@
-set_languages("cxx20")
+set_languages("cxx23")
 
 add_rules("mode.debug", "mode.release", "mode.releasedbg")
 set_allowedplats("windows", "mingw", "linux", "macosx", "wasm")
